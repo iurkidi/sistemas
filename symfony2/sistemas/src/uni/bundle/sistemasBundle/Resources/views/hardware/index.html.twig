@@ -1,0 +1,46 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+{% block central %} 
+    <h1>hardware list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Ipreal</th>
+                <th>Memoria</th>
+                <th>Disco</th>
+                <th>Cpu</th>
+                <th>Programas</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.id }}</td>
+                <td><a href="{{ path('hardware_show', { 'id': entity.id }) }}">{{ entity.nombre }}</a></td>
+                <td>{{ entity.ipreal }}</td>
+                <td>{{ entity.memoria }}</td>
+                <td>{{ entity.disco }}</td>
+                <td>{{ entity.cpu }}</td>
+                <td>
+              {% for maq in entity.maquinas %}
+                   {% for prog in maq.programas %}
+                {{ prog.nombre }}
+                {% endfor %}
+            {% endfor %}  
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+     {#   <ul>
+        <li>
+            <a href="{{ path('hardware_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>#}
+    {% endblock %}

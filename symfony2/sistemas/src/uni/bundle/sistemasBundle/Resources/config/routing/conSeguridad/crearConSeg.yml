@@ -1,0 +1,13 @@
+linkCrear:
+    path:     /
+    defaults: { _controller: "uniSistemasBundle:Default:indexCrear" }
+
+#
+#
+#maqvirtual_new:
+#    path:     /new
+#    defaults: { _controller: "uniSistemasBundle:maqvirtual:new" }
+#    
+#maqvirtual_new:
+#    path:     /new
+#    defaults: { _controller: "uniSistemasBundle:maqvirtual:new" }

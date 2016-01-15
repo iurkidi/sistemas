@@ -1,0 +1,30 @@
+maqvirtual:
+    path:     /
+    defaults: { _controller: "uniSistemasBundle:maqvirtual:index" }
+
+maqvirtual_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniSistemasBundle:maqvirtual:show" }
+
+maqvirtual_new:
+    path:     /new
+    defaults: { _controller: "uniSistemasBundle:maqvirtual:new" }
+
+maqvirtual_create:
+    path:     /create
+    defaults: { _controller: "uniSistemasBundle:maqvirtual:create" }
+    requirements: { _method: post }
+
+maqvirtual_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniSistemasBundle:maqvirtual:edit" }
+
+maqvirtual_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniSistemasBundle:maqvirtual:update" }
+    requirements: { _method: post|put }
+
+maqvirtual_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniSistemasBundle:maqvirtual:delete" }
+    requirements: { _method: post|delete }

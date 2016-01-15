@@ -1,0 +1,4 @@
+services:
+#    uni_sistemas.example:
+#        class: uni\bundle\sistemasBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

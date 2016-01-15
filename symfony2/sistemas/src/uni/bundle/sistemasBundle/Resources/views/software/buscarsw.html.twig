@@ -1,0 +1,29 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+{% block central %}
+                
+        <form action="{{path('respBuscSW')}}" method="POST">
+             <div class="LineaFormulario">      
+                    Buscar Software:
+                    <input type="text" name="nomsoft" value="">
+                    <input type="submit" value="Buscar">
+             </div>
+        </form>
+        
+       {% if nomSW is not null%}
+       <div class="LineaFormulario">  
+        <h1 class="izquierda separarIzq15">
+            Maquinas con software {{entidad.nombre}} 
+        </h1>
+       </div>
+       <div class="LineaFormulario">  </div>
+                
+            {% for maq in entidad.maquinas %}
+                <div class="LineaFormulario">
+                    <h2 class="izquierda separarIzq15"><a href="{{ path('maqvirtual_show', { 'id': maq.id }) }}">{{ maq.nombre }}</a> ({{ maq.ipvirtual }} ) - Maquina: <a href="{{ path('hardware_show', { 'id': maq.hardware.id }) }}">{{maq.hardware.nombre}}</a></h2>
+            
+                </div>
+            {% endfor %}                                
+                                  
+     {%endif%}
+{% endblock %}

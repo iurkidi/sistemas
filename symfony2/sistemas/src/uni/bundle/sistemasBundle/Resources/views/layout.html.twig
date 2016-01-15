@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+
+ {% block cuerpo %}
+ 
+        <div id="menuSup">
+            {% block menuSup %}
+                
+             <ul id="menu-horizontal">
+                <li><a href="{{path('uni_sistemas_homepage')}}" title="Texto">INICIO</a>                               
+                 <li><a href="{{path('linkCrear')}}" title="Texto">Crear</a></li>
+                <li><a href="#" title="Texto">Hardware</a>
+                     <ul>
+                        <li><a href="{{path('linkHardware')}}" title="Texto">Buscar</a></li>
+                        <li><a href="{{path('hardware')}}" title="Texto">Listado</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{path('maqvirtual')}}" title="Texto">Maquinas virtuales</a></li>
+                <li><a href="#" title="Texto">Software</a>
+                    <ul>
+                        <li><a href="{{path('buscSW')}}" title="Texto">Buscar</a></li>
+                        <li><a href="{{path('software')}}" title="Texto">Listado</a></li>
+                    </ul>
+                </li>                                              
+             </ul>
+              <img src="{{ asset('bundles/unisistemas/img/ordenador.jpeg') }}" width="2%" heigth="2%" class="izquierda claseclearright"/>
+            {% endblock %}
+        </div>
+ 
+        
+        <div id="central">
+            
+            {% block central %}
+            
+            {% endblock %}
+            
+        </div>
+ 
+ 
+ {% endblock %}

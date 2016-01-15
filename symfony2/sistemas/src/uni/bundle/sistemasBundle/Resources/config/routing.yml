@@ -1,0 +1,27 @@
+uni_sistemas_software:
+    resource: "@uniSistemasBundle/Resources/config/routing/software.yml"
+    prefix:   /software
+
+uni_sistemas_maqvirtual:
+    resource: "@uniSistemasBundle/Resources/config/routing/maqvirtual.yml"
+    prefix:   /maqvirtual
+
+uni_sistemas_hardware:
+    resource: "@uniSistemasBundle/Resources/config/routing/hardware.yml"
+    prefix:   /hardware
+
+uni_sistemas_homepage:
+    path:     /sistemas
+    defaults: { _controller: uniSistemasBundle:Default:index }
+
+linkCrear_conSeguridad:
+    resource: "@uniSistemasBundle/Resources/config/routing/conSeguridad/crearConSeg.yml"
+    prefix:   /linkCrear/conSeguridad
+        
+linkHardware:
+    path:     /linkHardware
+    defaults: { _controller: "uniSistemasBundle:hardware:buscarHW" }
+    
+linkSoftware:
+    path:     /linkSoftware
+    defaults: { _controller: "uniSistemasBundle:software:buscarSW" }

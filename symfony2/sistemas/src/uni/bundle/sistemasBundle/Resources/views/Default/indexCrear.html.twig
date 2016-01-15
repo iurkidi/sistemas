@@ -1,0 +1,13 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+{% block central %} 
+    
+    <h1>Menu Crear</h1>
+
+     <ul>
+        <li><a href="{{path('maqvirtual_new')}}" title="Texto">Nueva Maquina virtual</a>                               
+        <li><a href="{{path('hardware_new')}}" title="Texto">Nuevo Hardware</a></li>
+        <li><a href="{{path('software_new')}}" title="Texto">Nuevo software</a></li>       
+     </ul>
+    
+{% endblock %}
