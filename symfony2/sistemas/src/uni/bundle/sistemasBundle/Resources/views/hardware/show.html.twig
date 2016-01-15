@@ -36,10 +36,7 @@
     {% for maq in entity.maquinas %}             
         <div class="LineaFormulario izquierda separarIzq15">
             <h2 class="izquierda separarIzq15"><a href="{{ path('maqvirtual_show', { 'id': maq.id }) }}">{{ maq.nombre }}</a>
-                IP: {{maq.ipvirtual}} / Tareas: {{maq.tareas}} </h2>
-               {# {% for plat in juego.plataformas %} 
-                    <h3 class="izquierda separarIzq15"><a href="{{ path('plataforma_show', { 'id': plat.id }) }}">{{ plat.nombre }}</a></h3>
-                {% endfor %}#}
+                IP: {{maq.ipvirtual}} / Tareas: {{maq.tareas}} </h2>           
         </div>
     {% endfor %}
 
