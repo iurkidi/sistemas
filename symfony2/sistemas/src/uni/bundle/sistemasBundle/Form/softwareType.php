@@ -16,6 +16,7 @@ class softwareType extends AbstractType
     {
         $builder
             ->add('nombre')
+            ->add('descripcion')
             ->add('tamanyo')
             ->add('maquinas')
         ;

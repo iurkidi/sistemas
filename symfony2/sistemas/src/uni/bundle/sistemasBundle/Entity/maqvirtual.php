@@ -63,7 +63,7 @@ class maqvirtual
 
     public function __construct() {
         $this->programas = new ArrayCollection();        
-    }
+    }    
     
     public function __toString() {
         return $this->nombre;

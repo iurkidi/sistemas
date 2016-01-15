@@ -1,6 +1,6 @@
 {% extends 'uniSistemasBundle::layout.html.twig' %}
 
-{% block central %} 
+{% block central %}
     <h1>software list</h1>
 
     <table class="records_list">
@@ -8,6 +8,7 @@
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
+                <th>Descripcion</th>
                 <th>Tamanyo</th>
                 <th>Actions</th>
             </tr>
@@ -17,6 +18,7 @@
             <tr>
                 <td><a href="{{ path('software_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.nombre }}</td>
+                <td>{{ entity.descripcion }}</td>
                 <td>{{ entity.tamanyo }}</td>
                 <td>
                 <ul>
@@ -33,11 +35,11 @@
         </tbody>
     </table>
 
- {#       <ul>
+        <ul>
         <li>
             <a href="{{ path('software_new') }}">
                 Create a new entry
             </a>
         </li>
-    </ul>#}
+    </ul>
     {% endblock %}

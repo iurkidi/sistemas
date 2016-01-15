@@ -1,6 +1,6 @@
 {% extends 'uniSistemasBundle::layout.html.twig' %}
 
-{% block central %} 
+{% block central %}
     <h1>software</h1>
 
     <table class="record_properties">
@@ -14,7 +14,11 @@
                 <td>{{ entity.nombre }}</td>
             </tr>
             <tr>
-                <th>Tamaño</th>
+                <th>Descripcion</th>
+                <td>{{ entity.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Tamanyo</th>
                 <td>{{ entity.tamanyo }}</td>
             </tr>
         </tbody>

@@ -32,6 +32,13 @@ class software
     /**
      * @var string
      *
+     * @ORM\Column(name="descripcion", type="text")
+     */
+    private $descripcion;
+    
+     /**
+     * @var string
+     *
      * @ORM\Column(name="tamanyo", type="string", length=6)
      */
     private $tamanyo;
@@ -43,7 +50,7 @@ class software
     private $maquinas;
 
     public function __construct() {
-        $this->maquinas = new ArrayCollection();
+        $this->maquinas = new ArrayCollection();        
     }
     
     public function __toString() {
@@ -85,35 +92,35 @@ class software
     }
 
     /**
-     * Set tamaño
+     * Set descripcion
      *
-     * @param string $tamanyo
+     * @param string $descripcion
      * @return software
      */
-    public function setTamanyo($tamanyo)
+    public function setDescripcion($descripcion)
     {
-        $this->tamaño = $tamanyo;
+        $this->descripcion = $descripcion;
 
         return $this;
     }
 
     /**
-     * Get tamanyo
+     * Get descripcion
      *
      * @return string 
      */
-    public function getTamanyo()
+    public function getDescripcion()
     {
-        return $this->tamanyo;
+        return $this->descripcion;
     }
 
     /**
      * Add maquinas
      *
-     * @param \uni\bundle\sistemasBundle\Entity\maqvirtual $maquinas
+     * @param \uni\bundle\sistemasBundle\Entity\anuncios $maquinas
      * @return software
      */
-    public function addMaquina(\uni\bundle\sistemasBundle\Entity\maqvirtual $maquinas)
+    public function addMaquina(\uni\bundle\sistemasBundle\Entity\anuncios $maquinas)
     {
         $this->maquinas[] = $maquinas;
 
@@ -123,9 +130,9 @@ class software
     /**
      * Remove maquinas
      *
-     * @param \uni\bundle\sistemasBundle\Entity\maqvirtual $maquinas
+     * @param \uni\bundle\sistemasBundle\Entity\anuncios $maquinas
      */
-    public function removeMaquina(\uni\bundle\sistemasBundle\Entity\maqvirtual $maquinas)
+    public function removeMaquina(\uni\bundle\sistemasBundle\Entity\anuncios $maquinas)
     {
         $this->maquinas->removeElement($maquinas);
     }
@@ -138,5 +145,28 @@ class software
     public function getMaquinas()
     {
         return $this->maquinas;
+    }
+
+    /**
+     * Set tamanyo
+     *
+     * @param string $tamanyo
+     * @return software
+     */
+    public function setTamanyo($tamanyo)
+    {
+        $this->tamanyo = $tamanyo;
+
+        return $this;
+    }
+
+    /**
+     * Get tamanyo
+     *
+     * @return string 
+     */
+    public function getTamanyo()
+    {
+        return $this->tamanyo;
     }
 }
